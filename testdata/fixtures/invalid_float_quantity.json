@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "source": "orders",
+    "snapshot_id": "snap-float-001",
+    "cutoff_iso": "2026-11-05T12:00:00Z",
+    "record_count": 1
+  },
+  "orders": [
+    {
+      "order_id": "ord-bad-01",
+      "sku_id": "sku-bad",
+      "requested_units": 5.5
+    }
+  ]
+}

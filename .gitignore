@@ -1,0 +1,15 @@
+# Binaries
+/fulfillment-reconcile
+/bin/
+
+# Go build and test artifacts
+*.test
+*.out
+/build/
+/dist/
+
+# OS and IDE files
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOTOOLCHAIN: local
+      GOENV: 'off'
+      GOPROXY: 'off'
+      GOCACHE: ${{ github.workspace }}/build/cache
+      GOTMPDIR: ${{ github.workspace }}/build/tmp
+      GOPATH: ${{ github.workspace }}/build/gopath
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Prepare Go toolchain
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: '1.27'
+          cache: false
+      - name: Prepare local build directories
+        run: mkdir -p build/cache build/tmp build/gopath
+      - name: Vet
+        run: go vet ./...
+      - name: Regression and adversarial tests
+        run: go test -race -timeout=90s ./...
+      - name: Build local CLI
+        run: go build -o build/fulfillment-reconcile ./cmd/fulfillment-reconcile
+      - name: Offline demos
+        run: |
+          build/fulfillment-reconcile demo
+          build/fulfillment-reconcile demo --format=json

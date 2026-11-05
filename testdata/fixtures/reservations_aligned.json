@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "source": "reservations",
+    "snapshot_id": "snap-res-20261105-001",
+    "cutoff_iso": "2026-11-05T12:00:00Z",
+    "record_count": 4
+  },
+  "events": [
+    {"event_id": "res-evt-1001", "order_id": "ord-1001", "sku_id": "sku-alpha", "reserved_units": 5, "occurred_at_iso": "2026-11-05T10:15:00Z"},
+    {"event_id": "res-evt-1001", "order_id": "ord-1001", "sku_id": "sku-alpha", "reserved_units": 5, "occurred_at_iso": "2026-11-05T10:15:00Z"},
+    {"event_id": "res-evt-1002", "order_id": "ord-1002", "sku_id": "sku-beta", "reserved_units": 10, "occurred_at_iso": "2026-11-05T10:20:00Z"},
+    {"event_id": "res-evt-1003", "order_id": "ord-1003", "sku_id": "sku-gamma", "reserved_units": 8, "occurred_at_iso": "2026-11-05T10:25:00Z"}
+  ]
+}

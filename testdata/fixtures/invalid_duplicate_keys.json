@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "source": "orders",
+    "source": "orders_duplicated",
+    "snapshot_id": "snap-invalid-001",
+    "cutoff_iso": "2026-11-05T12:00:00Z",
+    "record_count": 0
+  },
+  "orders": []
+}

@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "source": "reservations",
+    "snapshot_id": "snap-res-conflict-001",
+    "cutoff_iso": "2026-11-05T12:00:00Z",
+    "record_count": 2
+  },
+  "events": [
+    {"event_id": "res-conflict-01", "order_id": "ord-2001", "sku_id": "sku-delta", "reserved_units": 5, "occurred_at_iso": "2026-11-05T10:00:00Z"},
+    {"event_id": "res-conflict-01", "order_id": "ord-2001", "sku_id": "sku-delta", "reserved_units": 4, "occurred_at_iso": "2026-11-05T10:05:00Z"}
+  ]
+}

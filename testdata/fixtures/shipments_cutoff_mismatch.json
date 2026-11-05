@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "source": "shipments",
+    "snapshot_id": "snap-ship-mismatch-001",
+    "cutoff_iso": "2026-11-05T13:00:00Z",
+    "record_count": 1
+  },
+  "shipments": [
+    {"shipment_id": "shp-mismatch-01", "order_id": "ord-1001", "sku_id": "sku-alpha", "shipped_units": 5, "shipped_at_iso": "2026-11-05T12:30:00Z"}
+  ]
+}

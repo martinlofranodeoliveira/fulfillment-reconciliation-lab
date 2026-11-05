@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "schema_version": "0.1.0",
+    "source": "orders",
+    "snapshot_id": "snap-orders-20261105-001",
+    "cutoff_iso": "2026-11-05T12:00:00Z",
+    "record_count": 3
+  },
+  "orders": [
+    {"order_id": "ord-1001", "sku_id": "sku-alpha", "requested_units": 5},
+    {"order_id": "ord-1002", "sku_id": "sku-beta", "requested_units": 10},
+    {"order_id": "ord-1003", "sku_id": "sku-gamma", "requested_units": 8}
+  ]
+}
